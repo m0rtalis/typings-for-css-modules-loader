@@ -18,7 +18,7 @@ const cssModuleToNamedExports = (cssModuleKeys) => {
     .join('\n');
 };
 
-const allWordsRegexp = /^\w+$/i;
+const allWordsRegexp = /^[a-zA-Z]\w*$/i;
 export const filterNonWordClasses = (cssModuleKeys) => {
   const filteredClassNames = cssModuleKeys.filter(classname => allWordsRegexp.test(classname));
   if (filteredClassNames.length === cssModuleKeys.length) {
